@@ -1,10 +1,8 @@
-// ════════════════════════════════════════════════════════════
-//  MOKA NOIR — main.js
-// ════════════════════════════════════════════════════════════
+// MOKA NOIR — main.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ─── Custom Cursor ─────────────────────────────────────────
+  // Custom Cursor 
   const dot  = document.querySelector('.cursor-dot');
   const ring = document.querySelector('.cursor-ring');
 
@@ -26,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animateCursor);
   })();
 
-  // ─── Scroll Reveal ─────────────────────────────────────────
+  // croll Reveal
   const reveals = document.querySelectorAll('.reveal');
 
   const observer = new IntersectionObserver((entries) => {
@@ -40,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reveals.forEach(el => observer.observe(el));
 
-  // ─── Navbar scroll effect ──────────────────────────────────
+  // Navbar scroll effect
   const navbar = document.querySelector('.navbar-container');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) {
@@ -50,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // ─── Menu card stagger on scroll ──────────────────────────
+  // Menu card stagger on scroll
   const menuCards = document.querySelectorAll('.menu-card');
   const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -71,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardObserver.observe(card);
   });
 
-  // ─── Process steps stagger ────────────────────────────────
+  // Process steps stagger
   const steps = document.querySelectorAll('.process-step');
   const stepObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     stepObserver.observe(step);
   });
 
-  // ─── CTA email input micro-interaction ────────────────────
+  // CTA email input micro-interaction
   const ctaInput = document.querySelector('.cta-input');
   const ctaForm  = document.querySelector('.cta-form');
 

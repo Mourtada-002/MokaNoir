@@ -1,6 +1,4 @@
-/* ════════════════════════════════════════════════════════════
-   MOKA NOIR — CSS COMPLET
-════════════════════════════════════════════════════════════ */
+/*  MOKA NOIR — CSS COMPLET  */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
 
@@ -21,7 +19,7 @@
   --font-body: 'Jost', sans-serif;
 }
 
-/* ─── Reset ─────────────────────────────────────────────── */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -33,7 +31,7 @@ body {
   cursor: none;
 }
 
-/* ─── Custom Cursor ─────────────────────────────────────── */
+/* Custom Cursor */
 .cursor-dot {
   width: 6px; height: 6px;
   background: var(--coffee-brown);
@@ -57,9 +55,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   width: 48px; height: 48px; opacity: 0.2;
 }
 
-/* ════════════════════════════════════════════════════════════
-   NAVBAR
-════════════════════════════════════════════════════════════ */
+/* NAVBAR */
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -129,9 +125,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 .logo-circle.small { position: static; transform: none; width: 52px; height: 52px; }
 .logo-circle.small img { width: 42px; height: 42px; }
 
-/* ════════════════════════════════════════════════════════════
-   HERO
-════════════════════════════════════════════════════════════ */
+/* HERO */
 .hero {
   display: flex;
   flex-direction: column;
@@ -180,7 +174,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   z-index: 1;
 }
 
-/* ─── Hero Left ─────────────────────────────────────────── */
+/* Hero Left */
 .hero-left {
   display: flex;
   flex-direction: column;
@@ -232,7 +226,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   font-weight: 300;
 }
 
-/* ─── Buttons ───────────────────────────────────────────── */
+/* Buttons */
 .boutons { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .boutons button {
@@ -270,7 +264,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   border-color: var(--coffee-brown);
 }
 
-/* ─── Hero Stats ────────────────────────────────────────── */
+/* Hero Stats */
 .hero-stats {
   display: flex;
   align-items: center;
@@ -298,7 +292,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   background: rgba(60, 42, 33, 0.2);
 }
 
-/* ─── Hero Right ────────────────────────────────────────── */
+/* Hero Right */
 .hero-right {
   display: flex;
   justify-content: center;
@@ -359,7 +353,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 
-/* ─── Scroll hint ───────────────────────────────────────── */
+/* Scroll hint */
 .scroll-hint {
   position: absolute;
   bottom: 36px; left: 50%;
@@ -388,9 +382,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   50% { height: 55px; opacity: 0.8; }
 }
 
-/* ════════════════════════════════════════════════════════════
-   MARQUEE
-════════════════════════════════════════════════════════════ */
+/* MARQUEE */
 .marquee-section {
   background: var(--coffee-brown);
   overflow: hidden;
@@ -420,9 +412,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   to   { transform: translateX(-50%); }
 }
 
-/* ════════════════════════════════════════════════════════════
-   SHARED SECTION STYLES
-════════════════════════════════════════════════════════════ */
+/* SHARED SECTION STYLES */
 .section-eyebrow {
   display: block;
   font-family: var(--font-body);
@@ -476,7 +466,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 .link-arrow:hover { gap: 16px; }
 .link-arrow span { transition: transform 0.3s ease; }
 
-/* ─── Reveal on scroll ──────────────────────────────────── */
+/* Reveal on scroll */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -487,9 +477,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   transform: translateY(0);
 }
 
-/* ════════════════════════════════════════════════════════════
-   ABOUT SECTION
-════════════════════════════════════════════════════════════ */
+/* ABOUT SECTION */
 .about-section {
   padding: 120px 40px;
 }
@@ -501,7 +489,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin: 0 auto;
 }
 
-/* ─── Image column ──────────────────────────────────────── */
+/* Image column */
 .about-image-col { flex: 0 0 420px; }
 
 .about-img-wrapper { position: relative; }
@@ -597,7 +585,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin-top: 2px;
 }
 
-/* ─── Text column ───────────────────────────────────────── */
+/* Text column */
 .about-text-col {
   display: flex;
   flex-direction: column;
@@ -606,9 +594,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 .about-cta { margin-top: 12px; }
 
-/* ════════════════════════════════════════════════════════════
-   MENU SECTION
-════════════════════════════════════════════════════════════ */
+/*  MENU SECTION */
 .menu-section {
   padding: 80px 40px 120px;
   background: linear-gradient(180deg, var(--cream-bg) 0%, var(--cream-dark) 100%);
@@ -746,9 +732,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   color: var(--coffee-brown);
 }
 
-/* ════════════════════════════════════════════════════════════
-   PROCESS SECTION
-════════════════════════════════════════════════════════════ */
+/* PROCESS SECTION */
 .process-section {
   background: var(--coffee-brown);
   padding: 120px 40px;
@@ -819,9 +803,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin: 0 auto;
 }
 
-/* ════════════════════════════════════════════════════════════
-   TESTIMONIALS
-════════════════════════════════════════════════════════════ */
+/* TESTIMONIALS  */
 .testimonials-section { padding: 120px 40px; }
 .testimonials-inner {
   max-width: var(--site-max-width);
@@ -910,9 +892,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin-top: 2px;
 }
 
-/* ════════════════════════════════════════════════════════════
-   CTA / NEWSLETTER
-════════════════════════════════════════════════════════════ */
+/* CTA / NEWSLETTER */
 .cta-section {
   background: var(--coffee-brown);
   padding: 120px 40px;
@@ -1016,9 +996,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   letter-spacing: 0.03em;
 }
 
-/* ════════════════════════════════════════════════════════════
-   FOOTER
-════════════════════════════════════════════════════════════ */
+/* FOOTER */
 .footer {
   background: #2a1d15;
   padding: 80px 40px 0;
@@ -1125,9 +1103,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   letter-spacing: 0.04em;
 }
 
-/* ════════════════════════════════════════════════════════════
-   ANIMATIONS
-════════════════════════════════════════════════════════════ */
+/* ANIMATIONS */
 @keyframes float {
   0%, 100% { transform: rotate(-6deg) translateY(0px); }
   50%       { transform: rotate(-6deg) translateY(-16px); }
@@ -1145,9 +1121,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 
 
-/* ════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET (≤ 1024px)
-════════════════════════════════════════════════════════════ */
+/*  RESPONSIVE — TABLET (≤ 1024px) */
 @media (max-width: 1024px) {
 
   /* Navbar */
@@ -1189,9 +1163,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 
 
-/* ════════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (≤ 768px)
-════════════════════════════════════════════════════════════ */
+/* RESPONSIVE — MOBILE (≤ 768px) */
 @media (max-width: 768px) {
 
   /* Hide custom cursor on touch */
@@ -1199,7 +1171,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   body { cursor: auto; }
   a, button { cursor: pointer; }
 
-  /* ─── Navbar ───────────────────────────────────────────── */
+  /* Navbar */
   .navbar-container { padding: 16px 16px; }
 
   .navbar-pill {
@@ -1220,7 +1192,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   .logo-circle { width: 66px; height: 66px; }
   .logo-circle img { width: 54px; height: 54px; }
 
-  /* ─── Hero ─────────────────────────────────────────────── */
+  /* Hero */
   .hero {
     padding: 90px 0 60px;
     min-height: 100svh;
@@ -1241,7 +1213,7 @@ body:has(a:hover, button:hover) .cursor-ring {
     position: relative;
   }
 
-  /* ── Gobelet : premier, pleine largeur ── */
+  /* Gobelet : premier, pleine largeur */
   .hero-right {
     order: 1;
     max-width: 100%;
@@ -1279,7 +1251,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   }
   .hero-badge svg { width: 70px; height: 70px; }
 
-  /* ── Texte : second, remonte par-dessus le gobelet ── */
+  /* Texte : second, remonte par-dessus le gobelet */
   .hero-left {
     order: 2;
     max-width: 100%;
@@ -1311,10 +1283,10 @@ body:has(a:hover, button:hover) .cursor-ring {
 
   .scroll-hint { bottom: 20px; }
 
-  /* ─── Marquee ──────────────────────────────────────────── */
+  /*  Marquee */
   .marquee-track span { font-size: 11px; }
 
-  /* ─── About ────────────────────────────────────────────── */
+  /* About */
   .about-section { padding: 80px 20px; }
 
   .about-container {
@@ -1342,10 +1314,10 @@ body:has(a:hover, button:hover) .cursor-ring {
   .about-text-col { align-items: flex-start; }
   .section-body { max-width: 100%; }
 
-  /* ─── Section titles ───────────────────────────────────── */
+  /* Section titles */
   .section-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
 
-  /* ─── Menu ─────────────────────────────────────────────── */
+  /* Menu */
   .menu-section { padding: 60px 20px 80px; }
   .section-header { margin-bottom: 40px; }
   .menu-grid { grid-template-columns: 1fr; gap: 16px; }
@@ -1353,7 +1325,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   .menu-card { padding: 26px 22px; }
   .menu-card.featured { order: -1; }
 
-  /* ─── Process ──────────────────────────────────────────── */
+  /* Process */
   .process-section { padding: 80px 20px; }
 
   .process-steps {
@@ -1393,7 +1365,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 
   .process-header { margin-bottom: 48px; text-align: left; }
 
-  /* ─── Testimonials ─────────────────────────────────────── */
+  /* Testimonials */
   .testimonials-section { padding: 80px 20px; }
 
   .testimonials-grid {
@@ -1403,7 +1375,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 
   .testi-card.featured-testi { margin-top: 0; }
 
-  /* ─── CTA ──────────────────────────────────────────────── */
+  /* CTA */
   .cta-section { padding: 80px 20px; }
 
   .cta-title { font-size: clamp(2rem, 8vw, 2.8rem); }
@@ -1424,7 +1396,7 @@ body:has(a:hover, button:hover) .cursor-ring {
     border-radius: 14px;
   }
 
-  /* ─── Footer ───────────────────────────────────────────── */
+  /* Footer */
   .footer { padding: 60px 20px 0; }
 
   .footer-inner {
@@ -1450,9 +1422,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 
 
-/* ════════════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE (≤ 390px)
-════════════════════════════════════════════════════════════ */
+/* RESPONSIVE — SMALL MOBILE (≤ 390px) */
 @media (max-width: 390px) {
 
   .navbar-pill { padding: 0 14px; }

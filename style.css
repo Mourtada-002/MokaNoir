@@ -1143,3 +1143,333 @@ body:has(a:hover, button:hover) .cursor-ring {
 @keyframes fadeIn {
   to { opacity: 1; }
 }
+
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤ 1024px)
+════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  /* Navbar */
+  .navbar-container { padding: 20px 24px; }
+  .navbar-pill { padding: 0 28px; height: 56px; }
+  .nav-group { gap: 20px; }
+  .nav-group a { font-size: 12px; }
+  .logo-circle { width: 78px; height: 78px; }
+  .logo-circle img { width: 62px; height: 62px; }
+
+  /* Hero */
+  .hero { padding: 130px 32px 80px; }
+  .hero-container { gap: 24px; }
+  #title { font-size: clamp(2.4rem, 4.5vw, 3.2rem); }
+  .Cup-MokaNoir img { max-width: 320px; }
+  .cup-glow-ring { width: 280px; height: 280px; }
+  .ring-2 { width: 360px; height: 360px; }
+  .hero-badge { bottom: -10px; right: 10px; }
+  .hero-badge svg { width: 80px; height: 80px; }
+
+  /* About */
+  .about-container { gap: 48px; }
+  .about-image-col { flex: 0 0 320px; }
+  .about-img-frame, .about-img-bg { width: 260px; height: 320px; }
+
+  /* Menu */
+  .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  /* Process */
+  .process-steps { gap: 0; }
+  .process-connector { flex: 0 0 30px; }
+  .step-content p { max-width: 18ch; font-size: 0.8rem; }
+
+  /* Testimonials */
+  .testimonials-grid { gap: 16px; }
+
+  /* Footer */
+  .footer-links { gap: 36px; }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 768px)
+════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Hide custom cursor on touch */
+  .cursor-dot, .cursor-ring { display: none; }
+  body { cursor: auto; }
+  a, button { cursor: pointer; }
+
+  /* ─── Navbar ───────────────────────────────────────────── */
+  .navbar-container { padding: 16px 16px; }
+
+  .navbar-pill {
+    padding: 0 20px;
+    height: 52px;
+    border-radius: 40px;
+  }
+
+  /* Masquer les liens de nav — garder seulement logo + 2 liens clés */
+  .nav-group { gap: 14px; }
+  .nav-group a { font-size: 11px; letter-spacing: 0.05em; }
+
+  /* Cacher les liens moins importants sur mobile */
+  .nav-group a:nth-child(2),
+  .nav-group a:nth-child(3) { display: none; }
+
+  .nav-logo { width: 70px; }
+  .logo-circle { width: 66px; height: 66px; }
+  .logo-circle img { width: 54px; height: 54px; }
+
+  /* ─── Hero ─────────────────────────────────────────────── */
+  .hero {
+    padding: 90px 0 60px;
+    min-height: 100svh;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .hero-bg-text {
+    font-size: clamp(100px, 28vw, 160px);
+    top: 30%;
+  }
+
+  /* Stack vertical : gobelet EN HAUT, texte qui chevauche par-dessous */
+  .hero-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: relative;
+  }
+
+  /* ── Gobelet : premier, pleine largeur ── */
+  .hero-right {
+    order: 1;
+    max-width: 100%;
+    width: 100%;
+    min-height: 320px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .Cup-MokaNoir {
+    /* On retire la rotation sur mobile pour un rendu plus propre */
+    transform: rotate(-4deg);
+    animation: float-mobile 4.5s ease-in-out infinite;
+  }
+  .Cup-MokaNoir img {
+    max-width: 260px;
+    max-height: 300px;
+    filter: drop-shadow(0 40px 60px rgba(60, 42, 33, 0.28));
+  }
+
+  @keyframes float-mobile {
+    0%, 100% { transform: rotate(-4deg) translateY(0px); }
+    50%       { transform: rotate(-4deg) translateY(-12px); }
+  }
+
+  .cup-glow-ring { width: 220px; height: 220px; }
+  .ring-2 { width: 310px; height: 310px; }
+
+  .hero-badge {
+    bottom: 8px;
+    right: 24px;
+  }
+  .hero-badge svg { width: 70px; height: 70px; }
+
+  /* ── Texte : second, remonte par-dessus le gobelet ── */
+  .hero-left {
+    order: 2;
+    max-width: 100%;
+    gap: 18px;
+    padding: 32px 24px 40px;
+    margin-top: -64px;          /* ← le chevauchement clé */
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--cream-bg) 18%,
+      var(--cream-bg) 100%
+    );
+    border-radius: 32px 32px 0 0;
+  }
+
+  #title {
+    font-size: clamp(2.4rem, 9vw, 3.2rem);
+    padding-bottom: 18px;
+  }
+  #sub { font-size: 0.9rem; max-width: 100%; }
+
+  .boutons { gap: 10px; }
+  .boutons button { padding: 12px 22px; font-size: 12px; }
+
+  .hero-stats { gap: 18px; margin-top: 4px; }
+  .stat-num { font-size: 1.5rem; }
+
+  .scroll-hint { bottom: 20px; }
+
+  /* ─── Marquee ──────────────────────────────────────────── */
+  .marquee-track span { font-size: 11px; }
+
+  /* ─── About ────────────────────────────────────────────── */
+  .about-section { padding: 80px 20px; }
+
+  .about-container {
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .about-image-col {
+    flex: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img-wrapper { width: 240px; }
+  .about-img-frame, .about-img-bg { width: 220px; height: 280px; }
+
+  .about-year-badge {
+    width: 72px; height: 72px;
+    bottom: -14px; right: -14px;
+  }
+  .about-year-badge span { font-size: 1.1rem; }
+
+  .about-text-col { align-items: flex-start; }
+  .section-body { max-width: 100%; }
+
+  /* ─── Section titles ───────────────────────────────────── */
+  .section-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+
+  /* ─── Menu ─────────────────────────────────────────────── */
+  .menu-section { padding: 60px 20px 80px; }
+  .section-header { margin-bottom: 40px; }
+  .menu-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  .menu-card { padding: 26px 22px; }
+  .menu-card.featured { order: -1; }
+
+  /* ─── Process ──────────────────────────────────────────── */
+  .process-section { padding: 80px 20px; }
+
+  .process-steps {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .process-step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .process-connector {
+    width: 1px;
+    height: 36px;
+    flex: 0 0 1px;
+    background: linear-gradient(to bottom, rgba(201, 169, 110, 0.4), rgba(201, 169, 110, 0.1));
+    margin: 0 0 0 20px;
+    margin-bottom: 0;
+  }
+
+  .step-num {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 44px;
+    text-align: right;
+    padding-top: 2px;
+  }
+
+  .step-content { flex: 1; }
+  .step-content h4 { font-size: 1.15rem; }
+  .step-content p { max-width: 100%; font-size: 0.875rem; margin: 0; }
+
+  .process-header { margin-bottom: 48px; text-align: left; }
+
+  /* ─── Testimonials ─────────────────────────────────────── */
+  .testimonials-section { padding: 80px 20px; }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testi-card.featured-testi { margin-top: 0; }
+
+  /* ─── CTA ──────────────────────────────────────────────── */
+  .cta-section { padding: 80px 20px; }
+
+  .cta-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+  .cta-form {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .cta-input { padding: 8px 12px; font-size: 15px; }
+
+  .cta-btn {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border-radius: 14px;
+  }
+
+  /* ─── Footer ───────────────────────────────────────────── */
+  .footer { padding: 60px 20px 0; }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand { flex: unset; }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE (≤ 390px)
+════════════════════════════════════════════════════════════ */
+@media (max-width: 390px) {
+
+  .navbar-pill { padding: 0 14px; }
+  .nav-group a { font-size: 10px; }
+  .logo-circle { width: 58px; height: 58px; }
+  .logo-circle img { width: 46px; height: 46px; }
+
+  #title { font-size: clamp(2.1rem, 10vw, 2.6rem); }
+
+  .Cup-MokaNoir img { max-width: 210px; max-height: 250px; }
+  .hero-right { min-height: 270px; }
+  .hero-left { margin-top: -52px; padding: 26px 16px 32px; }
+
+  .boutons { flex-direction: column; }
+  .boutons button { width: 100%; text-align: center; }
+
+  .menu-grid { gap: 12px; }
+
+  .footer-links { gap: 24px; }
+}

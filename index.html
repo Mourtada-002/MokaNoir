@@ -6,11 +6,13 @@
     <title>Moka Noir — L'Expérience Café Ultime</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!-- CURSOR CUSTOM -->
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
@@ -19,9 +21,9 @@
     <nav class="navbar-container">
       <div class="navbar-pill">
         <div class="nav-group">
-          <a href="#">Menu</a>
-          <a href="#">Nos Cafés</a>
-          <a href="#">Savoir-faire</a>
+          <a href="#nos-cafes">Menu</a>
+          <a href="#nos-cafes">Nos Cafés</a>
+          <a href="#savoir-faire">Savoir-faire</a>
         </div>
         <div class="nav-logo">
           <div class="logo-circle">
@@ -30,8 +32,8 @@
         </div>
         <div class="nav-group">
           <a href="#">Boutique</a>
-          <a href="#">Le Blog</a>
-          <a href="#">Abonnements</a>
+          <a href="#blog">Le Blog</a>
+          <a href="#abonnements">Abonnements</a>
         </div>
       </div>
     </nav>
@@ -77,9 +79,21 @@
           </div>
           <div class="hero-badge">
             <svg viewBox="0 0 100 100" width="100" height="100">
-              <path id="badge-circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
-              <text font-size="10.5" fill="#3c2a21" letter-spacing="2" font-family="Jost" font-weight="400">
-                <textPath href="#badge-circle">TORRÉFIÉ AVEC AMOUR • DEPUIS 1987 •</textPath>
+              <path
+                id="badge-circle"
+                d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                fill="none"
+              />
+              <text
+                font-size="10.5"
+                fill="#3c2a21"
+                letter-spacing="2"
+                font-family="Jost"
+                font-weight="400"
+              >
+                <textPath href="#badge-circle">
+                  TORRÉFIÉ AVEC AMOUR • DEPUIS 1987 •
+                </textPath>
               </text>
             </svg>
             <span class="badge-star">✦</span>
@@ -110,7 +124,7 @@
     </div>
 
     <!-- ABOUT / PHILOSOPHIE -->
-    <section class="about-section reveal">
+    <section id="savoir-faire" class="about-section reveal">
       <div class="about-container">
         <div class="about-image-col">
           <div class="about-img-wrapper">
@@ -140,12 +154,18 @@
 
         <div class="about-text-col">
           <span class="section-eyebrow">— Notre philosophie</span>
-          <h2 class="section-title">L'art de la<br /><em>tasse parfaite</em></h2>
+          <h2 class="section-title">
+            L'art de la<br /><em>tasse parfaite</em>
+          </h2>
           <p class="section-body">
-            Chez Moka Noir, chaque grain est une promesse. Nous parcourons les terroirs du monde entier pour sélectionner des cafés d'une qualité exceptionnelle, torréfiés à la main dans notre atelier parisien.
+            Chez Moka Noir, chaque grain est une promesse. Nous parcourons les
+            terroirs du monde entier pour sélectionner des cafés d'une qualité
+            exceptionnelle, torréfiés à la main dans notre atelier parisien.
           </p>
           <p class="section-body">
-            Notre maître torréfacteur, fort de trente ans d'expérience, veille sur chaque fournée avec une précision d'orfèvre — parce qu'entre un café ordinaire et un café inoubliable, il n'y a que quelques degrés.
+            Notre maître torréfacteur, fort de trente ans d'expérience, veille
+            sur chaque fournée avec une précision d'orfèvre — parce qu'entre un
+            café ordinaire et un café inoubliable, il n'y a que quelques degrés.
           </p>
           <div class="about-cta">
             <a href="#" class="link-arrow">Notre histoire <span>→</span></a>
@@ -155,7 +175,7 @@
     </section>
 
     <!-- MENU / CAFÉS -->
-    <section class="menu-section reveal">
+    <section id="nos-cafes" class="menu-section reveal">
       <div class="section-header">
         <span class="section-eyebrow">— La Carte</span>
         <h2 class="section-title">Nos créations<br /><em>du moment</em></h2>
@@ -168,7 +188,10 @@
             <span class="menu-tag">Classique</span>
           </div>
           <h3>Espresso Noir</h3>
-          <p>Pure concentration de notre blend signature. Une crema dorée, une amertume noble, une longueur infinie.</p>
+          <p>
+            Pure concentration de notre blend signature. Une crema dorée, une
+            amertume noble, une longueur infinie.
+          </p>
           <div class="menu-footer">
             <span class="menu-price">3000 FCFA</span>
             <button class="menu-btn">Commander</button>
@@ -181,7 +204,10 @@
             <span class="menu-tag">Signature</span>
           </div>
           <h3>Moka Noir Spécial</h3>
-          <p>Notre blend maison d'exception — notes de chocolat noir, d'agrumes et d'épices douces. L'expérience ultime.</p>
+          <p>
+            Notre blend maison d'exception — notes de chocolat noir, d'agrumes
+            et d'épices douces. L'expérience ultime.
+          </p>
           <div class="menu-footer">
             <span class="menu-price">8000 FCFA</span>
             <button class="menu-btn">Commander</button>
@@ -194,7 +220,10 @@
             <span class="menu-tag">Douceur</span>
           </div>
           <h3>Latte Vanille</h3>
-          <p>Espresso velouté, lait entier micro-moussé et pointe de vanille de Madagascar. Le réconfort absolu.</p>
+          <p>
+            Espresso velouté, lait entier micro-moussé et pointe de vanille de
+            Madagascar. Le réconfort absolu.
+          </p>
           <div class="menu-footer">
             <span class="menu-price">7000 FCFA</span>
             <button class="menu-btn">Commander</button>
@@ -207,7 +236,10 @@
             <span class="menu-tag">Saison</span>
           </div>
           <h3>Cold Brew Geisha</h3>
-          <p>Infusion à froid 20 heures. Geisha du Panama aux arômes floraux et fruités. Servi sur glaçons.</p>
+          <p>
+            Infusion à froid 20 heures. Geisha du Panama aux arômes floraux et
+            fruités. Servi sur glaçons.
+          </p>
           <div class="menu-footer">
             <span class="menu-price">10000 FCFA</span>
             <button class="menu-btn">Commander</button>
@@ -221,7 +253,9 @@
       <div class="process-inner">
         <div class="process-header">
           <span class="section-eyebrow light">— Du grain à la tasse</span>
-          <h2 class="section-title light">Un savoir-faire<br /><em>en 4 étapes</em></h2>
+          <h2 class="section-title light">
+            Un savoir-faire<br /><em>en 4 étapes</em>
+          </h2>
         </div>
 
         <div class="process-steps">
@@ -229,7 +263,10 @@
             <div class="step-num">01</div>
             <div class="step-content">
               <h4>Sélection</h4>
-              <p>Nous parcourons les origines pour choisir uniquement les meilleurs lots — à la hauteur de nos exigences.</p>
+              <p>
+                Nous parcourons les origines pour choisir uniquement les
+                meilleurs lots — à la hauteur de nos exigences.
+              </p>
             </div>
           </div>
           <div class="process-connector"></div>
@@ -237,7 +274,10 @@
             <div class="step-num">02</div>
             <div class="step-content">
               <h4>Torréfaction</h4>
-              <p>Chaque fournée est surveillée à la seconde. Température, couleur, son des grains — tout compte.</p>
+              <p>
+                Chaque fournée est surveillée à la seconde. Température,
+                couleur, son des grains — tout compte.
+              </p>
             </div>
           </div>
           <div class="process-connector"></div>
@@ -245,7 +285,10 @@
             <div class="step-num">03</div>
             <div class="step-content">
               <h4>Mouture</h4>
-              <p>Moulue à la commande, calibrée pour chaque méthode d'extraction — du plus fin à la plus grossière.</p>
+              <p>
+                Moulue à la commande, calibrée pour chaque méthode d'extraction
+                — du plus fin à la plus grossière.
+              </p>
             </div>
           </div>
           <div class="process-connector"></div>
@@ -253,7 +296,10 @@
             <div class="step-num">04</div>
             <div class="step-content">
               <h4>Extraction</h4>
-              <p>L'art du barista s'exprime ici. Pression, temps, température — l'alchimie de la tasse parfaite.</p>
+              <p>
+                L'art du barista s'exprime ici. Pression, temps, température —
+                l'alchimie de la tasse parfaite.
+              </p>
             </div>
           </div>
         </div>
@@ -261,7 +307,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials-section reveal">
+    <section id="blog" class="testimonials-section reveal">
       <div class="testimonials-inner">
         <span class="section-eyebrow">— Ils en parlent</span>
         <h2 class="section-title">Ce que disent<br /><em>nos amateurs</em></h2>
@@ -269,7 +315,10 @@
         <div class="testimonials-grid">
           <div class="testi-card">
             <div class="testi-stars">✦✦✦✦✦</div>
-            <p class="testi-text">« Le meilleur espresso que j'aie jamais bu. Cette crema, ces arômes… J'ai fermé les yeux et j'étais à Naples. »</p>
+            <p class="testi-text">
+              « Le meilleur espresso que j'aie jamais bu. Cette crema, ces
+              arômes… J'ai fermé les yeux et j'étais à Naples. »
+            </p>
             <div class="testi-author">
               <div class="testi-avatar">ML</div>
               <div>
@@ -281,7 +330,10 @@
 
           <div class="testi-card featured-testi">
             <div class="testi-stars">✦✦✦✦✦</div>
-            <p class="testi-text">« Moka Noir a transformé mes matins. Je commande chaque mois et c'est systématiquement parfait. Un abonnement qui change la vie. »</p>
+            <p class="testi-text">
+              « Moka Noir a transformé mes matins. Je commande chaque mois et
+              c'est systématiquement parfait. Un abonnement qui change la vie. »
+            </p>
             <div class="testi-author">
               <div class="testi-avatar">TR</div>
               <div>
@@ -293,7 +345,10 @@
 
           <div class="testi-card">
             <div class="testi-stars">✦✦✦✦✦</div>
-            <p class="testi-text">« Le Cold Brew Geisha… Je ne pensais pas qu'un café froid pouvait être aussi élégant. Floral, léger, inoubliable. »</p>
+            <p class="testi-text">
+              « Le Cold Brew Geisha… Je ne pensais pas qu'un café froid pouvait
+              être aussi élégant. Floral, léger, inoubliable. »
+            </p>
             <div class="testi-author">
               <div class="testi-avatar">SC</div>
               <div>
@@ -307,17 +362,24 @@
     </section>
 
     <!-- NEWSLETTER / CTA -->
-    <section class="cta-section reveal">
+    <section id="abonnements" class="cta-section reveal">
       <div class="cta-inner">
         <div class="cta-deco">✦</div>
         <span class="section-eyebrow light">— Restez connectés</span>
-        <h2 class="cta-title">Rejoignez le cercle<br /><em>des connaisseurs</em></h2>
-        <p class="cta-sub">Recevez nos nouvelles origines, événements de dégustation et offres exclusives — directement dans votre boîte mail.</p>
+        <h2 class="cta-title">
+          Rejoignez le cercle<br /><em>des connaisseurs</em>
+        </h2>
+        <p class="cta-sub">
+          Recevez nos nouvelles origines, événements de dégustation et offres
+          exclusives — directement dans votre boîte mail.
+        </p>
         <div class="cta-form">
           <input type="email" placeholder="votre@email.com" class="cta-input" />
           <button class="cta-btn">S'abonner</button>
         </div>
-        <p class="cta-disclaimer">Pas de spam. Juste du café. Désabonnement en un clic.</p>
+        <p class="cta-disclaimer">
+          Pas de spam. Juste du café. Désabonnement en un clic.
+        </p>
       </div>
     </section>
 
@@ -331,7 +393,9 @@
             </div>
             <span class="footer-name">Moka Noir</span>
           </div>
-          <p class="footer-tagline">L'art du café depuis 2015.<br />Bamako, Mali.</p>
+          <p class="footer-tagline">
+            L'art du café depuis 2015.<br />Bamako, Mali.
+          </p>
           <div class="footer-socials">
             <a href="#" aria-label="Instagram">ig</a>
             <a href="#" aria-label="TikTok">tt</a>
@@ -343,15 +407,15 @@
           <div class="footer-col">
             <h5>Découvrir</h5>
             <a href="#">Notre histoire</a>
-            <a href="#">Le savoir-faire</a>
+            <a href="#savoir-faire">Le savoir-faire</a>
             <a href="#">Nos origines</a>
-            <a href="#">Le Blog</a>
+            <a href="#blog">Le Blog</a>
           </div>
           <div class="footer-col">
             <h5>Commander</h5>
             <a href="#">La Carte</a>
             <a href="#">Boutique</a>
-            <a href="#">Abonnements</a>
+            <a href="#abonnements">Abonnements</a>
             <a href="#">Cadeaux</a>
           </div>
           <div class="footer-col">

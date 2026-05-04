@@ -72,7 +72,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 50px;
   height: 60px;
   width: 100%;
   max-width: var(--site-max-width);
@@ -84,10 +84,11 @@ body:has(a:hover, button:hover) .cursor-ring {
 
 .nav-group {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   flex: 1;
+   justify-content: space-evenly;
 }
-.nav-group:last-child { justify-content: flex-end; }
+.nav-group:last-child {  justify-content: space-evenly; }
 
 .nav-group a {
   color: var(--text-color);

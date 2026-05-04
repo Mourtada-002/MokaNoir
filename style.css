@@ -121,7 +121,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   align-items: center;
   box-shadow: 0 2px 20px rgba(60, 42, 33, 0.3), 0 0 0 3px rgba(201, 169, 110, 0.2);
 }
-.logo-circle img { width: 72px; height: 72px; object-fit: contain; }
+.logo-circle img { width: 80px; height: 80px; object-fit: contain; border-radius: 50%; }
 .logo-circle.small { position: static; transform: none; width: 52px; height: 52px; }
 .logo-circle.small img { width: 42px; height: 42px; }
 

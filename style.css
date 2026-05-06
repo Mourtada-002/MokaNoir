@@ -1084,14 +1084,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   color: rgba(229, 217, 194, 0.06);
 }
 
-.menu-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-icon {
-  font-size: 1.8rem;
-}
 .menu-tag {
   font-size: 10px;
   letter-spacing: 0.12em;
@@ -1167,6 +1159,21 @@ body:has(a:hover, button:hover) .cursor-ring {
 .menu-card.featured .menu-btn {
   background: var(--gold-light);
   color: var(--coffee-brown);
+}
+
+.menu-card-img {
+  width: calc(100% + 56px);
+  margin: -32px -28px 16px -28px; 
+  height: 250px;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
+.menu-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* PROCESS SECTION */
@@ -1545,17 +1552,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   flex: 1;
 }
 
-.boutique-tag {
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: rgba(60, 42, 33, 0.08);
-  color: var(--coffee-brown);
-  padding: 3px 10px;
-  border-radius: 50px;
-  font-weight: 500;
-  width: fit-content;
-}
 .boutique-card.featured-boutique .boutique-tag {
   background: rgba(229, 217, 194, 0.15);
   color: var(--gold-light);
@@ -1615,6 +1611,20 @@ body:has(a:hover, button:hover) .cursor-ring {
 .boutique-card.featured-boutique .boutique-btn {
   background: var(--gold-light) !important;
   color: var(--coffee-brown) !important;
+}
+
+.boutique-card-img {
+  width: 100%;
+  height: 220px;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
+.boutique-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* =============================================

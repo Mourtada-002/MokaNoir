@@ -152,17 +152,45 @@ document.addEventListener("DOMContentLoaded", () => {
       ctaForm.style.boxShadow = "none";
     });
 
-    document.querySelector(".cta-btn")?.addEventListener("click", () => {
+    document.querySelector(".cta-btn")?.addEventListener("click", async () => {
       const val = ctaInput.value.trim();
       if (!val) return;
-      ctaInput.value = "";
+
       const btn = document.querySelector(".cta-btn");
-      btn.textContent = "✓ Parfait !";
-      btn.style.background = "#a8c898";
-      setTimeout(() => {
-        btn.textContent = "S'abonner";
-        btn.style.background = "";
-      }, 2500);
+      btn.textContent = "Envoi…";
+      btn.disabled = true;
+
+      try {
+        const res = await fetch("https://formspree.io/f/mrejkkdv", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({ type: "Newsletter", email: val }),
+        });
+
+        if (res.ok) {
+          ctaInput.value = "";
+          btn.textContent = "✓ Parfait !";
+          btn.style.background = "#a8c898";
+          setTimeout(() => {
+            btn.textContent = "S'abonner";
+            btn.style.background = "";
+            btn.disabled = false;
+          }, 2500);
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = "Erreur — Réessayer";
+        btn.style.background = "#c27474";
+        setTimeout(() => {
+          btn.textContent = "S'abonner";
+          btn.style.background = "";
+          btn.disabled = false;
+        }, 2500);
+      }
     });
   }
 
@@ -410,14 +438,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // =============================================
   const resSubmit = document.getElementById("resSubmit");
 
-  resSubmit?.addEventListener("click", () => {
+  resSubmit?.addEventListener("click", async () => {
     const nom = document.getElementById("resNom")?.value.trim();
     const email = document.getElementById("resEmail")?.value.trim();
     const date = document.getElementById("resDate")?.value;
     const personnes = document.getElementById("resPersonnes")?.value;
+    const message = document.getElementById("resMessage")?.value.trim();
 
     if (!nom || !email || !date) {
-      // Shake les champs vides
       [
         { id: "resNom", val: nom },
         { id: "resEmail", val: email },
@@ -438,47 +466,50 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Succès
-    resSubmit.textContent = "✓ Demande envoyée !";
-    resSubmit.style.background = "#6b8f71";
+    resSubmit.textContent = "Envoi en cours…";
     resSubmit.disabled = true;
 
-    setTimeout(() => {
-      resSubmit.textContent = "Envoyer la demande";
-      resSubmit.style.background = "";
-      resSubmit.disabled = false;
-      // Reset form
-      document.getElementById("resNom").value = "";
-      document.getElementById("resEmail").value = "";
-      document.getElementById("resDate").value = "";
-      document.getElementById("resMessage").value = "";
-    }, 3000);
-  });
+    try {
+      const res = await fetch("https://formspree.io/f/mrejkkdv", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          type: "Réservation de table",
+          nom,
+          email,
+          date,
+          personnes,
+          message: message || "—",
+        }),
+      });
 
-  // Ajouter shake keyframe dynamiquement si pas déjà en CSS
-  if (!document.getElementById("shake-style")) {
-    const style = document.createElement("style");
-    style.id = "shake-style";
-    style.textContent = `
-      @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        20% { transform: translateX(-6px); }
-        40% { transform: translateX(6px); }
-        60% { transform: translateX(-4px); }
-        80% { transform: translateX(4px); }
+      if (res.ok) {
+        resSubmit.textContent = "✓ Demande envoyée !";
+        resSubmit.style.background = "#6b8f71";
+        setTimeout(() => {
+          resSubmit.textContent = "Envoyer la demande";
+          resSubmit.style.background = "";
+          resSubmit.disabled = false;
+          document.getElementById("resNom").value = "";
+          document.getElementById("resEmail").value = "";
+          document.getElementById("resDate").value = "";
+          document.getElementById("resMessage").value = "";
+        }, 3000);
+      } else {
+        throw new Error();
       }
-    `;
-    document.head.appendChild(style);
-  }
-
-  // Focus styles pour les inputs du formulaire
-  document.querySelectorAll(".form-input").forEach((input) => {
-    input.addEventListener("focus", () => {
-      input.style.borderColor = "var(--gold)";
-    });
-    input.addEventListener("blur", () => {
-      input.style.borderColor = "";
-    });
+    } catch {
+      resSubmit.textContent = "Erreur — Réessayer";
+      resSubmit.style.background = "#c27474";
+      setTimeout(() => {
+        resSubmit.textContent = "Envoyer la demande";
+        resSubmit.style.background = "";
+        resSubmit.disabled = false;
+      }, 2500);
+    }
   });
 
   // =============================================

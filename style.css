@@ -832,6 +832,9 @@ body:has(a:hover, button:hover) .cursor-ring {
 /* ABOUT SECTION */
 .about-section {
   padding: 120px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-container {
   display: flex;
@@ -1006,6 +1009,16 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 .about-cta {
   margin-top: 12px;
+}
+
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 20px 60px rgba(60, 42, 33, 0.15);
+  border: 1px solid rgba(60, 42, 33, 0.12);
 }
 
 /* MENU SECTION */

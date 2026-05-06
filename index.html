@@ -369,48 +369,63 @@
     </section>
 
     <!-- NOTRE HISTOIRE -->
-<section id="notre-histoire" class="histoire-section reveal">
-  <div class="histoire-inner">
-    <div class="histoire-header">
-      <span class="section-eyebrow">— Notre histoire</span>
-      <h2 class="section-title">De la passion<br /><em>à la tasse</em></h2>
-    </div>
-    <div class="histoire-timeline">
-      <div class="timeline-item reveal-child">
-        <div class="timeline-year">2015</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>La fondation</h4>
-          <p>Lamine Diallo, passionné de café depuis l'enfance, ouvre son premier atelier de torréfaction à Abidjan. Avec une vision moderne et une passion intacte, l'aventure Moka Noir commence.</p>
+    <section id="notre-histoire" class="histoire-section reveal">
+      <div class="histoire-inner">
+        <div class="histoire-header">
+          <span class="section-eyebrow">— Notre histoire</span>
+          <h2 class="section-title">De la passion<br /><em>à la tasse</em></h2>
+        </div>
+        <div class="histoire-timeline">
+          <div class="timeline-item reveal-child">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>La fondation</h4>
+              <p>
+                Lamine Diallo, passionné de café depuis l'enfance, ouvre son
+                premier atelier de torréfaction à Abidjan. Avec une vision
+                moderne et une passion intacte, l'aventure Moka Noir commence.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <div class="timeline-year">2018</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Les premières origines</h4>
+              <p>
+                Premiers voyages en Éthiopie et au Sénégal. Moka Noir signe ses
+                premiers partenariats directs avec des coopératives locales —
+                une philosophie du commerce équitable ancrée dès le départ.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>L'expansion européenne</h4>
+              <p>
+                Ouverture d'un partenariat avec des torréfacteurs en France et
+                en Belgique. Moka Noir devient une référence pour les
+                connaisseurs en quête d'authenticité africaine.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item reveal-child">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-dot active"></div>
+            <div class="timeline-content">
+              <h4>Aujourd'hui</h4>
+              <p>
+                4 origines, deux ateliers, une communauté grandissante
+                d'amateurs. Et toujours la même obsession : la tasse parfaite.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item reveal-child">
-        <div class="timeline-year">2018</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>Les premières origines</h4>
-          <p>Premiers voyages en Éthiopie et au Sénégal. Moka Noir signe ses premiers partenariats directs avec des coopératives locales — une philosophie du commerce équitable ancrée dès le départ.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-child">
-        <div class="timeline-year">2021</div>
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>L'expansion européenne</h4>
-          <p>Ouverture d'un partenariat avec des torréfacteurs en France et en Belgique. Moka Noir devient une référence pour les connaisseurs en quête d'authenticité africaine.</p>
-        </div>
-      </div>
-      <div class="timeline-item reveal-child">
-        <div class="timeline-year">2026</div>
-        <div class="timeline-dot active"></div>
-        <div class="timeline-content">
-          <h4>Aujourd'hui</h4>
-          <p>4 origines, deux ateliers, une communauté grandissante d'amateurs. Et toujours la même obsession : la tasse parfaite.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- NOS ORIGINES -->
     <section id="nos-origines" class="origines-section reveal">
@@ -837,7 +852,12 @@
           </div>
           <div class="footer-col">
             <h5>Contact</h5>
-            <a href="https://maps.google.com/?q=Bamako,Mali" target="_blank" rel="noopener noreferrer">La Carte</a>
+            <a
+              href="https://maps.google.com/?q=Bamako,Mali"
+              target="_blank"
+              rel="noopener noreferrer"
+              >La Carte</a
+            >
             <a href="#nous-trouver">Nous trouver</a>
             <a href="#reservations">Réservations</a>
             <a href="#">Partenariats</a>
@@ -846,9 +866,59 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Moka Noir. Tous droits réservés.</span>
-        <a href="https://portfolio-mouhamed-mourtada-dicko.netlify.app/" target="_blank" rel="noopener noreferrer" class="footer-bottom-link">Designed & Developed by MMD.Dev</a>
+        <a
+          href="https://portfolio-mouhamed-mourtada-dicko.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-bottom-link"
+          >Designed & Developed by MMD.Dev</a
+        >
       </div>
     </footer>
+
+    <!-- MODAL COMMANDE -->
+    <div class="order-overlay" id="orderOverlay"></div>
+    <div class="order-modal" id="orderModal">
+      <div class="order-modal-header">
+        <h3 class="order-modal-title">Finaliser la commande</h3>
+        <button class="cart-close" id="orderModalClose">✕</button>
+      </div>
+      <p class="order-modal-sub">
+        Nous vous contacterons pour confirmer la livraison.
+      </p>
+      <div class="order-form-fields">
+        <div class="form-group">
+          <label>Nom & Prénom</label>
+          <input
+            type="text"
+            class="form-input"
+            id="orderNom"
+            placeholder="Amadou Diallo"
+          />
+        </div>
+        <div class="form-group">
+          <label>Numéro de téléphone</label>
+          <input
+            type="tel"
+            class="form-input"
+            id="orderTel"
+            placeholder="+223 66 89 58 45"
+          />
+        </div>
+        <div class="form-group">
+          <label>Localisation</label>
+          <input
+            type="text"
+            class="form-input"
+            id="orderLoc"
+            placeholder="Bamako, Faladie..."
+          />
+        </div>
+        <button class="btn-primary order-submit-btn" id="orderSubmit">
+          Valider la commande
+        </button>
+      </div>
+    </div>
 
     <script src="main.js"></script>
   </body>

@@ -1164,7 +1164,7 @@ body:has(a:hover, button:hover) .cursor-ring {
 .menu-card-img {
   width: calc(100% + 56px);
   margin: -32px -28px 16px -28px; 
-  height: 250px;
+  height: 260px;
   border-radius: 18px 18px 0 0;
   overflow: hidden;
 }

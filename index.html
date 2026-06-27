@@ -11,8 +11,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body>
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-panel panel-left"></div>
+      <div class="preloader-panel panel-right"></div>
+      <div class="preloader-logo">
+        <div class="preloader-text">
+          <span class="pl" data-letter="M">M</span>
+          <span class="pl" data-letter="o">o</span>
+          <span class="pl" data-letter="k">k</span>
+          <span class="pl" data-letter="a">a</span>
+          <span class="pl pl-space"> </span>
+          <span class="pl" data-letter="N">N</span>
+          <span class="pl" data-letter="o">o</span>
+          <span class="pl" data-letter="i">i</span>
+          <span class="pl" data-letter="r">r</span>
+        </div>
+        <div class="preloader-tagline">Torréfaction Artisanale</div>
+      </div>
+    </div>
+
     <!-- CURSOR CUSTOM -->
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
@@ -860,13 +882,7 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 Moka Noir. Tous droits réservés.</span>
-        <a
-          href="https://portfolio-mouhamedmourtadadicko.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="footer-bottom-link"
-          >Designed & Developed by MMD.Dev</a
-        >
+        <span>Designed & Developed by MMD.Dev</span>
       </div>
     </footer>
 

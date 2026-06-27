@@ -1,5 +1,3 @@
-/*  MOKA NOIR — CSS COMPLET  */
-
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap");
 
 :root {
@@ -37,6 +35,87 @@ body {
   font-family: var(--font-body);
   overflow-x: hidden;
   cursor: none;
+}
+
+/* =============================================
+   PRELOADER
+   ============================================= */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.preloader-panel {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--cream-bg);
+  z-index: 9999;
+}
+.panel-left {
+  left: 0;
+}
+.panel-right {
+  right: 0;
+}
+
+.preloader-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  opacity: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.preloader-text {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  overflow: hidden;
+}
+
+.pl {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--coffee-brown);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  transform: translateY(40px);
+  display: inline-block;
+}
+
+.pl-space {
+  width: 0.3em;
+}
+
+.preloader-tagline {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--coffee-brown);
+  opacity: 0;
+}
+
+/* Hero elements cachés avant l'animation GSAP */
+.hero-left,
+.hero-right,
+.hero-badge,
+.scroll-hint {
+  opacity: 0;
 }
 
 /* Custom Cursor */
@@ -602,7 +681,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   height: 36px;
   background: rgba(60, 42, 33, 0.2);
 }
-
 .hero-right {
   display: flex;
   justify-content: center;
@@ -610,20 +688,17 @@ body:has(a:hover, button:hover) .cursor-ring {
   max-width: 50%;
   flex: 1;
   position: relative;
-  animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
-
 .cup-glow-ring {
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   border: 1px solid rgba(60, 42, 33, 0.1);
-  animation: pulse-ring 4s ease-in-out infinite;
 }
 .ring-2 {
-  width: 480px;
-  height: 480px;
+  width: 500px;
+  height: 500px;
   animation-delay: 1s;
   border-color: rgba(201, 169, 110, 0.08);
 }
@@ -644,18 +719,12 @@ body:has(a:hover, button:hover) .cursor-ring {
   position: relative;
   z-index: 2;
   transform: rotate(-6deg);
-  animation:
-    float 4.5s ease-in-out infinite,
-    fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
-  filter: drop-shadow(0 30px 60px rgba(60, 42, 33, 0.2));
+  animation: float 4.5s ease-in-out infinite;
 }
 .Cup-MokaNoir img {
   width: auto;
-  height: auto;
-  max-width: 420px;
-  max-height: 480px;
+  height: 400px;
 }
-
 .hero-badge {
   position: absolute;
   bottom: -20px;
@@ -688,7 +757,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   align-items: center;
   gap: 10px;
   opacity: 0;
-  animation: fadeIn 1s ease 1.5s forwards;
 }
 .scroll-line {
   width: 1px;
@@ -818,15 +886,8 @@ body:has(a:hover, button:hover) .cursor-ring {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* ABOUT SECTION */
@@ -1191,8 +1252,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   flex-direction: column;
   gap: 0;
 }
-
-/* Ligne verticale centrale */
 .histoire-timeline::before {
   content: "";
   position: absolute;
@@ -1217,15 +1276,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   align-items: center;
   gap: 0;
   padding: 40px 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
-}
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .timeline-year {
@@ -2150,17 +2200,6 @@ body:has(a:hover, button:hover) .cursor-ring {
   letter-spacing: 0.04em;
 }
 
-.footer-bottom-link {
-  font-size: 11px;
-  color: var(--text-muted);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  transition: color 0.2s;
-}
-.footer-bottom-link:hover {
-  color: var(--gold);
-}
-
 /* ANIMATIONS */
 @keyframes float {
   0%,
@@ -2358,6 +2397,14 @@ body:has(a:hover, button:hover) .cursor-ring {
   a,
   button {
     cursor: pointer;
+  }
+
+  .menu-card-img {
+    height: 300px;
+  }
+
+  .boutique-card-img {
+    height: 300px;
   }
 
   .navbar-container {

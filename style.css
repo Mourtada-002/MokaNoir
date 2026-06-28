@@ -37,9 +37,7 @@ body {
   cursor: none;
 }
 
-/* =============================================
-   PRELOADER
-   ============================================= */
+/* PRELOADER */
 .preloader {
   position: fixed;
   inset: 0;
@@ -110,7 +108,6 @@ body {
   opacity: 0;
 }
 
-/* Hero elements cachés avant l'animation GSAP */
 .hero-left,
 .hero-right,
 .hero-badge,
@@ -1228,9 +1225,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin: 0 auto;
 }
 
-/* =============================================
-   NOTRE HISTOIRE
-   ============================================= */
+   /* NOTRE HISTOIRE */
 .histoire-section {
   padding: 120px 40px;
   background: var(--cream-bg);
@@ -1345,9 +1340,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   margin-left: auto;
 }
 
-/* =============================================
-   NOS ORIGINES
-   ============================================= */
+   /* NOS ORIGINES */
 .origines-section {
   background: var(--coffee-brown);
   padding: 120px 40px;
@@ -1449,9 +1442,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   color: var(--gold);
 }
 
-/* =============================================
-   BOUTIQUE
-   ============================================= */
+   /* BOUTIQUE */
 .boutique-section {
   padding: 80px 40px 120px;
   background: var(--cream-dark);
@@ -1583,9 +1574,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   display: block;
 }
 
-/* =============================================
-   CADEAUX
-   ============================================= */
+   /* CADEAUX */
 .cadeaux-section {
   background: var(--coffee-brown);
   padding: 120px 40px;
@@ -1933,9 +1922,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   letter-spacing: 0.03em;
 }
 
-/* =============================================
-   CONTACT / NOUS TROUVER + RÉSERVATIONS
-   ============================================= */
+   /* CONTACT / NOUS TROUVER + RÉSERVATIONS */
 .contact-section {
   padding: 120px 40px;
   background: var(--cream-bg);
@@ -2236,9 +2223,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   }
 }
 
-/* =============================================
-   RESPONSIVE — TABLET (≤ 1024px)
-   ============================================= */
+   /* RESPONSIVE — TABLET (≤ 1024px) */
 @media (max-width: 1024px) {
   .navbar-container {
     padding: 20px 24px;
@@ -2383,9 +2368,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   }
 }
 
-/* =============================================
-   RESPONSIVE — MOBILE (≤ 768px)
-   ============================================= */
+   /* RESPONSIVE — MOBILE (≤ 768px) */
 @media (max-width: 768px) {
   .cursor-dot,
   .cursor-ring {
@@ -2831,9 +2814,7 @@ body:has(a:hover, button:hover) .cursor-ring {
   }
 }
 
-/* =============================================
-   RESPONSIVE — SMALL MOBILE (≤ 390px)
-   ============================================= */
+   /* RESPONSIVE — SMALL MOBILE (≤ 390px) */
 @media (max-width: 390px) {
   .navbar-pill {
     padding: 0 14px;

@@ -1,12 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // =============================================
-  // GSAP PLUGINS
-  // =============================================
   gsap.registerPlugin(ScrollTrigger);
 
-  // =============================================
   // CUSTOM CURSOR
-  // =============================================
   const dot = document.querySelector(".cursor-dot");
   const ring = document.querySelector(".cursor-ring");
 
@@ -32,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })();
   }
 
-  // =============================================
   // PRELOADER + HERO ENTRANCE
-  // =============================================
   const preloader = document.getElementById("preloader");
   const panelLeft = document.querySelector(".panel-left");
   const panelRight = document.querySelector(".panel-right");
@@ -293,24 +286,18 @@ document.addEventListener("DOMContentLoaded", () => {
       3.4,
     );
 
-  // =============================================
-  // ABOUT — Clip-path reveal + stagger texte
-  // =============================================
-  gsap.fromTo(
-    ".about-image-col",
-    {
-      clipPath: "inset(0 100% 0 0)",
-    },
-    {
-      clipPath: "inset(0 0% 0 0)",
-      duration: 1.1,
-      ease: "power3.inOut",
-      scrollTrigger: {
-        trigger: ".about-section",
-        start: "top 75%",
-      },
-    },
-  );
+  // ABOUT
+  gsap.fromTo(".about-main-img", {
+  clipPath: "inset(0 100% 0 0)",
+}, {
+  clipPath: "inset(0 0% 0 0)",
+  duration: 1.1,
+  ease: "power3.inOut",
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 75%",
+  }
+});
 
   gsap.fromTo(
     ".about-year-badge",
@@ -395,9 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // MENU — Header + Flip 3D cards
-  // =============================================
   gsap.fromTo(
     ".menu-section .section-eyebrow",
     {
@@ -450,9 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // PROCESS — Draw line + steps pop
-  // =============================================
   gsap.fromTo(
     ".process-section .section-eyebrow",
     {
@@ -522,9 +505,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // HISTOIRE — Draw line scrub + dots + contenu
-  // =============================================
   gsap.fromTo(
     ".histoire-section .section-eyebrow",
     {
@@ -612,9 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // =============================================
   // ORIGINES — Header + stagger diagonal
-  // =============================================
   gsap.fromTo(
     ".origines-section .section-eyebrow",
     {
@@ -687,9 +666,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // =============================================
   // BOUTIQUE — Header + scale reveal
-  // =============================================
   gsap.fromTo(
     ".boutique-section .section-eyebrow",
     {
@@ -742,9 +719,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // CADEAUX — Texte gauche + cards cascade
-  // =============================================
   gsap.fromTo(
     ".cadeaux-text",
     {
@@ -786,9 +761,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // =============================================
   // TESTIMONIALS — Featured first + sides slide
-  // =============================================
   gsap.fromTo(
     ".testimonials-inner .section-eyebrow",
     {
@@ -863,9 +836,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // =============================================
   // CTA — + form bounce
-  // =============================================
   gsap.fromTo(
     ".cta-deco",
     {
@@ -960,9 +931,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // CONTACT — Info gauche + form droite
-  // =============================================
   gsap.fromTo(
     ".contact-info",
     {
@@ -1000,9 +969,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // FOOTER — Colonnes stagger
-  // =============================================
   gsap.fromTo(
     ".footer-brand",
     {
@@ -1041,9 +1008,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   );
 
-  // =============================================
   // NAVBAR SCROLL
-  // =============================================
   const navbar = document.querySelector(".navbar-container");
   ScrollTrigger.create({
     start: "top -60",
@@ -1061,9 +1026,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }),
   });
 
-  // =============================================
   // CTA EMAIL MICRO-INTERACTION
-  // =============================================
   const ctaInput = document.querySelector(".cta-input");
   const ctaForm = document.querySelector(".cta-form");
 
@@ -1114,9 +1077,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // =============================================
   // MINI CART
-  // =============================================
   const miniCart = document.getElementById("miniCart");
   const cartOverlay = document.getElementById("cartOverlay");
   const cartClose = document.getElementById("cartClose");
@@ -1305,9 +1266,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCart();
 
-  // =============================================
   // FORMULAIRE RÉSERVATION
-  // =============================================
   document.getElementById("resSubmit")?.addEventListener("click", async () => {
     const nom = document.getElementById("resNom")?.value.trim();
     const email = document.getElementById("resEmail")?.value.trim();

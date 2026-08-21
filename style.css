@@ -2181,10 +2181,15 @@ body:has(a:hover, button:hover) .cursor-ring {
   justify-content: space-between;
   align-items: center;
 }
+
 .footer-bottom span {
   font-size: 11px;
   color: var(--text-muted);
   letter-spacing: 0.04em;
+}
+
+.footer-bottom a {
+  text-decoration: none;
 }
 
 /* ANIMATIONS */
